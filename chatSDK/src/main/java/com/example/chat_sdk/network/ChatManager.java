@@ -119,34 +119,22 @@ public class ChatManager {
     }
 
     public CompletableFuture<Boolean> hasChats(String userId) {
-        String url = "http://10.0.2.2:8080/hasChats/" + userId;
+        try {
+            Payload payload = RSocketUtils.buildPayload("chats.hasChats", userId);
 
-        return CompletableFuture.supplyAsync(() -> {
-            try {
-                java.net.URL endpoint = new java.net.URL(url);
-                java.net.HttpURLConnection conn = (java.net.HttpURLConnection) endpoint.openConnection();
-                conn.setRequestMethod("GET");
-                conn.setConnectTimeout(3000);
-                conn.setReadTimeout(3000);
+            return getActiveRSocket()
+                    .requestResponse(payload)
+                    .map(p -> RSocketUtils.parsePayload(p, Boolean.class))
+                    .toFuture();
 
-                int responseCode = conn.getResponseCode();
-                if (responseCode == 200) {
-                    try (java.io.InputStream inputStream = conn.getInputStream();
-                         java.util.Scanner scanner = new java.util.Scanner(inputStream)) {
-                        String response = scanner.useDelimiter("\\A").hasNext() ? scanner.next() : "false";
-                        return Boolean.parseBoolean(response);
-                    }
-                } else {
-                    Log.e("ChatManager", "❌ hasChats response code: " + responseCode);
-                    return false;
-                }
-
-            } catch (Exception e) {
-                Log.e("ChatManager", "🔥 Error in hasChats", e);
-                return false;
-            }
-        });
+        } catch (Exception e) {
+            CompletableFuture<Boolean> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
     }
+
+
 
     public void disposeMessageStream() {
         if (messageStreamDisposable != null && !messageStreamDisposable.isDisposed()) {

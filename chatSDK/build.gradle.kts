@@ -33,6 +33,7 @@ android {
 dependencies {
     implementation(project(":rsocketSDK")) // ✅ תלות ב-rsocketSDK
 
+
     implementation(project(":usersSDK"))
     implementation(libs.rsocket.core)
     implementation(libs.rsocket.transport.netty)

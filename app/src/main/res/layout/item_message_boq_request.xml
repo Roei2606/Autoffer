@@ -49,8 +49,7 @@
                 android:layout_height="80dp"
                 android:src="@drawable/ic_boq"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="View PDF"
-                 />
+                android:contentDescription="View PDF" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -61,6 +60,18 @@
                 android:layout_marginTop="4dp" />
         </LinearLayout>
 
+        <!-- ✅ טקסט סטטוס שמופיע אחרי לחיצה על Accept/Reject -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black" />
+
         <!-- מרווח -->
         <View
             android:layout_width="match_parent"
@@ -68,6 +79,7 @@
 
         <!-- שורת כפתורי אישור ודחייה -->
         <LinearLayout
+            android:id="@+id/layoutActions"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,8 +97,7 @@
                     android:layout_height="48dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Reject"
-                    android:src="@drawable/ic_reject"
-                     />
+                    android:src="@drawable/ic_reject" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
@@ -110,8 +121,7 @@
                     android:layout_height="48dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Accept"
-                    android:src="@drawable/ic_accept"
-                     />
+                    android:src="@drawable/ic_accept" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"

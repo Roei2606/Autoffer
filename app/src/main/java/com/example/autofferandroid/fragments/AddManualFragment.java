@@ -50,6 +50,20 @@ public class AddManualFragment extends Fragment {
         resetForm();
         projectManager = new ProjectManager();
 
+        // ✅ קבלת ערכים מה-arguments (מועבר מ-NewProjectFragment אחרי צילום/גלריה)
+        Bundle args = getArguments();
+        if (args != null) {
+            int measuredWidth = args.getInt("measured_width", -1);
+            int measuredHeight = args.getInt("measured_height", -1);
+
+            if (measuredWidth > 0) {
+                binding.editTextWidth.setText(String.valueOf(measuredWidth));
+            }
+            if (measuredHeight > 0) {
+                binding.editTextHeight.setText(String.valueOf(measuredHeight));
+            }
+        }
+
         binding.buttonFindProfiles.setOnClickListener(v -> {
             int width = parseInt(binding.editTextWidth.getText().toString());
             int height = parseInt(binding.editTextHeight.getText().toString());
@@ -105,12 +119,10 @@ public class AddManualFragment extends Fragment {
             item.setLocation(position);
             item.setIsExpensive(selectedProfile.isExpensive());
 
-
             AlumProfileDTO profileDTO = new AlumProfileDTO()
                     .setProfileNumber(selectedProfile.getProfileNumber())
                     .setUsageType(selectedProfile.getUsageType())
                     .setPricePerSquareMeter(selectedProfile.getPricePerSquareMeter());
-
 
             GlassDTO glassDTO = new GlassDTO()
                     .setType(selectedGlass.getType())
@@ -186,7 +198,6 @@ public class AddManualFragment extends Fragment {
                 .setNegativeButton("No", (dialog, which) -> {
                     NavController navController = NavHostFragment.findNavController(AddManualFragment.this);
                     navController.navigate(R.id.action_addManualFragment_to_currentProjectFragment);
-
                 })
                 .show();
     }

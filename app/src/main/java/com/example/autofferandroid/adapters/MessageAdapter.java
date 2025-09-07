@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.autofferandroid.R;
@@ -49,8 +50,11 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public int getItemViewType(int position) {
         Message message = messageList.get(position);
 
-        boolean isBoq = message.getFileName() != null && message.getFileName().startsWith("BOQ_Project_");
-        boolean isQuote = message.getFileName() != null && message.getFileName().startsWith("QUOTE_Project_");
+        boolean isBoq = (message.getFileName() != null && message.getFileName().startsWith("BOQ_Project_"))
+                || (message.getContent() != null && message.getContent().startsWith("[BOQ_REQUEST]"));
+
+        boolean isQuote = (message.getFileName() != null && message.getFileName().startsWith("QUOTE_Project_"))
+                || (message.getContent() != null && message.getContent().startsWith("[QUOTE_REQUEST]"));
 
         boolean isForCurrentUser = currentUserId.equals(message.getReceiverId());
         boolean isFactoryOrArchitect = "FACTORY".equals(currentUserProfileType) || "ARCHITECT".equals(currentUserProfileType);
@@ -70,7 +74,6 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         return message.getSenderId().equals(currentUserId) ? TYPE_SENT : TYPE_RECEIVED;
     }
-
 
     @NonNull
     @Override
@@ -98,7 +101,6 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         return new TextMessageViewHolder(view);
     }
 
-
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Message message = messageList.get(position);
@@ -111,7 +113,6 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             ((QuoteMessageViewHolder) holder).bind(message);
         }
     }
-
 
     @Override
     public int getItemCount() {
@@ -146,21 +147,38 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     class BoqMessageViewHolder extends RecyclerView.ViewHolder {
-        TextView textProjectAddress;
-        View buttonAccept, buttonReject, buttonViewPdf;
+        TextView textProjectAddress, textViewStatus;
+        View buttonAccept, buttonReject, buttonViewPdf, layoutActions;
 
         public BoqMessageViewHolder(@NonNull View itemView) {
             super(itemView);
             textProjectAddress = itemView.findViewById(R.id.textViewProjectAddress);
+            textViewStatus = itemView.findViewById(R.id.textViewStatus);
             buttonAccept = itemView.findViewById(R.id.buttonAccept);
             buttonReject = itemView.findViewById(R.id.buttonReject);
             buttonViewPdf = itemView.findViewById(R.id.buttonViewPdf);
+            layoutActions = itemView.findViewById(R.id.layoutActions);
         }
 
         public void bind(Message message) {
             textProjectAddress.setText("Project address: " + extractAddressFromContent(message.getContent()));
-            buttonAccept.setOnClickListener(v -> acceptListener.onBoqAccepted(message));
-            buttonReject.setOnClickListener(v -> rejectListener.onBoqRejected(message));
+
+            buttonAccept.setOnClickListener(v -> {
+                acceptListener.onBoqAccepted(message);
+                layoutActions.setVisibility(View.GONE);
+                textViewStatus.setVisibility(View.VISIBLE);
+                textViewStatus.setText("ACCEPTED");
+                textViewStatus.setTextColor(ContextCompat.getColor(itemView.getContext(), android.R.color.holo_green_dark));
+            });
+
+            buttonReject.setOnClickListener(v -> {
+                rejectListener.onBoqRejected(message);
+                layoutActions.setVisibility(View.GONE);
+                textViewStatus.setVisibility(View.VISIBLE);
+                textViewStatus.setText("REJECTED");
+                textViewStatus.setTextColor(ContextCompat.getColor(itemView.getContext(), android.R.color.holo_red_dark));
+            });
+
             buttonViewPdf.setOnClickListener(v -> viewListener.onBoqViewPdf(message));
         }
 
@@ -170,7 +188,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     class QuoteMessageViewHolder extends RecyclerView.ViewHolder {
-        TextView textQuoteMessage, textQuoteTime;
+        TextView textQuoteMessage;
         View buttonViewQuote;
 
         public QuoteMessageViewHolder(@NonNull View itemView) {
@@ -182,7 +200,6 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public void bind(Message message) {
             textQuoteMessage.setText("You've received a quote for project: " + extractProjectName(message.getFileName()));
             buttonViewQuote.setOnClickListener(v -> QuoteMessageHandler.openQuotePdf(v.getContext(), message));
-
         }
 
         private String extractProjectName(String fileName) {
@@ -190,7 +207,4 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             return fileName.replace("QUOTE_Project_", "").replace(".pdf", "");
         }
     }
-
-
-
 }

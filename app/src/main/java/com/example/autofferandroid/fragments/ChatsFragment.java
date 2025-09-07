@@ -70,18 +70,32 @@ public class ChatsFragment extends Fragment {
 
     private void checkIfHasChats() {
         String currentUserId = SessionManager.getInstance().getCurrentUserId();
-        chatManager.hasChats(currentUserId).thenAccept(hasChats -> {
-            requireActivity().runOnUiThread(() -> {
-                if (hasChats) {
-                    textViewNoChats.setVisibility(View.GONE);
-                    recyclerView.setVisibility(View.VISIBLE);
-                    loadChats();
-                } else {
-                    textViewNoChats.setVisibility(View.VISIBLE);
-                    recyclerView.setVisibility(View.GONE);
-                }
-            });
-        });
+        chatManager.hasChats(currentUserId)
+                .thenAccept(hasChats -> {
+                    if (getActivity() == null) return; // למנוע crash אם הפרגמנט כבר לא פעיל
+                    requireActivity().runOnUiThread(() -> {
+                        if (hasChats) {
+                            textViewNoChats.setVisibility(View.GONE);
+                            recyclerView.setVisibility(View.VISIBLE);
+                            loadChats();
+                        } else {
+                            textViewNoChats.setVisibility(View.VISIBLE);
+                            recyclerView.setVisibility(View.GONE);
+                        }
+                    });
+                })
+                .exceptionally(e -> {
+                    Log.e("ChatsFragment", "❌ Failed to check chats", e);
+                    if (getActivity() != null) {
+                        requireActivity().runOnUiThread(() -> {
+                            textViewNoChats.setVisibility(View.VISIBLE);
+                            recyclerView.setVisibility(View.GONE);
+                            Toast.makeText(getContext(), "Error loading chats", Toast.LENGTH_SHORT).show();
+                        });
+                    }
+                    return null;
+                });
+
     }
 
     @SuppressLint("NotifyDataSetChanged")

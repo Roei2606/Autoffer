@@ -202,16 +202,16 @@ public class NewProjectFragment extends Fragment {
     }
 
 
-
-
     private void sendImageToMeasurementService(File file) {
-//        WindowMeasurementApi api = ApiClient
-//                .getClient("http://10.0.2.2:8001/") // אמולטור. במכשיר אמיתי → IP של ה-Mac
-
-        WindowMeasurementApi api = ApiClient.getClient("http://192.168.1.137:8001/")
+        WindowMeasurementApi api = ApiClient
+                .getClient("http://192.168.1.137:8010/") // אל תשכח סלאש בסוף
                 .create(WindowMeasurementApi.class);
 
-        RequestBody reqFile = RequestBody.create(file, MediaType.parse("image/jpeg"));
+
+        String mimeType = requireContext().getContentResolver().getType(Uri.fromFile(file));
+        if (mimeType == null) mimeType = "image/jpeg"; // fallback
+        RequestBody reqFile = RequestBody.create(file, MediaType.parse(mimeType));
+
         MultipartBody.Part body = MultipartBody.Part.createFormData("file", file.getName(), reqFile);
 
         api.measureWindow(body).enqueue(new Callback<MeasurementCamera>() {
@@ -219,9 +219,15 @@ public class NewProjectFragment extends Fragment {
             public void onResponse(Call<MeasurementCamera> call, Response<MeasurementCamera> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     MeasurementCamera result = response.body();
-                    Toast.makeText(getContext(),
-                            "📏 Width: " + result.getWidth() + ", Height: " + result.getHeight(),
-                            Toast.LENGTH_LONG).show();
+
+                    // ✅ מעבר עם נתונים ל-AddManualFragment
+                    Bundle args = new Bundle();
+                    args.putInt("measured_width", (int) result.getWidth());
+                    args.putInt("measured_height", (int) result.getHeight());
+
+                    androidx.navigation.Navigation.findNavController(requireView())
+                            .navigate(R.id.action_newProjectFragment_to_addManualFragment, args);
+
                 } else {
                     Toast.makeText(getContext(), "⚠️ Failed: " + response.code(), Toast.LENGTH_SHORT).show();
                 }
@@ -232,6 +238,7 @@ public class NewProjectFragment extends Fragment {
                 Toast.makeText(getContext(), "❌ Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
     private boolean ensureProjectCreated() {

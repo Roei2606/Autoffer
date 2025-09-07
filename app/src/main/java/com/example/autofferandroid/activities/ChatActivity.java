@@ -19,6 +19,7 @@ import com.example.chat_sdk.requests.UnreadCountRequest;
 import com.example.autofferandroid.R;
 import com.example.autofferandroid.adapters.MessageAdapter;
 import com.example.autofferandroid.utils.BOQMessageHandler;
+import com.example.projects_sdk.network.ProjectManager;
 import com.example.rsocket_sdk.network.RSocketClientManager;
 import com.example.rsocket_sdk.network.RSocketUtils;
 import com.example.users_sdk.network.SessionManager;
@@ -143,26 +144,6 @@ public class ChatActivity extends AppCompatActivity
                 });
     }
 
-//    private void startListeningToStream() {
-//        if (messageStreamDisposable != null && !messageStreamDisposable.isDisposed()) {
-//            messageStreamDisposable.dispose();
-//        }
-//
-//        messageStreamDisposable = chatManager.streamMessages(chatId)
-//                .publishOn(Schedulers.boundedElastic())
-//                .subscribe(newMessage -> runOnUiThread(() -> {
-//                    boolean exists = messages.stream().anyMatch(m ->
-//                            m.getSenderId().equals(newMessage.getSenderId()) &&
-//                                    m.getContent().equals(newMessage.getContent()) &&
-//                                    m.getTimestamp().equals(newMessage.getTimestamp()));
-//
-//                    if (!exists) {
-//                        messages.add(newMessage);
-//                        messageAdapter.notifyItemInserted(messages.size() - 1);
-//                        recyclerView.scrollToPosition(messages.size() - 1);
-//                    }
-//                }), throwable -> Log.e("ChatActivity", "Error in message stream", throwable));
-//    }
 
     private void startListeningToStream() {
         if (messageStreamDisposable != null && !messageStreamDisposable.isDisposed()) {

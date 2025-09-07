@@ -109,13 +109,14 @@ public class CurrentProjectFragment extends Fragment {
             CreateProjectRequest request = CreateProjectMapper.toCreateRequest(project, currentItems);
 
             new ProjectManager().createProject(request).thenAccept(serverProject -> {
-                requireActivity().runOnUiThread(() -> {
-                    Toast.makeText(requireContext(), "Project saved successfully", Toast.LENGTH_SHORT).show();
-                    LocalProjectStorage.getInstance().clear();
-                    requireActivity().getSupportFragmentManager().popBackStack();
-                });
-            }).exceptionally(e -> {
-                requireActivity().runOnUiThread(() -> {
+                        requireActivity().runOnUiThread(() -> {
+                            Toast.makeText(requireContext(), "Project saved successfully", Toast.LENGTH_SHORT).show();
+                            LocalProjectStorage.getInstance().clear();
+
+                            NavController navController = NavHostFragment.findNavController(CurrentProjectFragment.this);
+                            navController.navigate(R.id.nav_my_projects);
+                        });
+                    }).exceptionally(e -> {requireActivity().runOnUiThread(() -> {
                     Log.e("CurrentProjectFragment", "Failed to save project", e);
                     Toast.makeText(requireContext(), "Failed to save project", Toast.LENGTH_SHORT).show();
                 });

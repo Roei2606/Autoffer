@@ -11,6 +11,7 @@ import retrofit2.http.Part;
 public interface WindowMeasurementApi {
 
     @Multipart
-    @POST("/measure")
+    @POST("measure")
     Call<MeasurementCamera> measureWindow(@Part MultipartBody.Part file);
+
 }

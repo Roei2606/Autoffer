@@ -14,9 +14,11 @@
         <action
             android:id="@+id/action_loginFragment_to_selectUserTypeFragment"
             app:destination="@id/selectUserTypeFragment" />
-        <action android:id="@+id/action_login_to_forgot_password"
+        <action
+            android:id="@+id/action_login_to_forgot_password"
             app:destination="@id/forgotPasswordFragment"/>
-        <action android:id="@+id/action_loginFragment_to_homeFragment"
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment"/>
     </fragment>
 
@@ -35,9 +37,7 @@
                 app:argType="com.example.core_models_sdk.models.UserType"
                 app:nullable="false" />
         </action>
-
     </fragment>
-
 
     <!-- 📝 Register -->
     <fragment
@@ -45,9 +45,11 @@
         android:name="com.example.autofferandroid.fragments.RegisterFragment"
         android:label="Register"
         tools:layout="@layout/fragment_register">
-        <argument android:name="userType"
+        <argument
+            android:name="userType"
             app:argType="com.example.core_models_sdk.models.UserType" />
-        <action android:id="@+id/action_registerFragment_to_loginFragment"
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment"/>
     </fragment>
 
@@ -57,7 +59,8 @@
         android:name="com.example.autofferandroid.fragments.ForgotPasswordFragment"
         android:label="Forgot Password"
         tools:layout="@layout/fragment_forgot_password">
-        <action android:id="@+id/action_forgotPasswordFragment_to_resetPasswordFragment"
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_resetPasswordFragment"
             app:destination="@id/resetPasswordFragment"/>
     </fragment>
 
@@ -67,42 +70,17 @@
         android:name="com.example.autofferandroid.fragments.ResetPasswordFragment"
         android:label="Reset Password"
         tools:layout="@layout/fragment_reset_password">
-        <action android:id="@+id/action_resetPasswordFragment_to_loginFragment"
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_loginFragment"
             app:destination="@id/loginFragment"/>
     </fragment>
 
-
-    <fragment
-        android:id="@+id/bottomNavMenuFragment"
-        android:name="com.example.autofferandroid.fragments.BottomNavMenuFragment"
-        android:label="Bottom Navigation"
-        tools:layout="@layout/fragment_dummy_navigation">
-
-        <action
-            android:id="@+id/action_bottomNavMenu_to_home"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_bottomNavMenu_to_chats"
-            app:destination="@id/nav_chats" />
-        <action
-            android:id="@+id/action_bottomNavMenu_to_new_project"
-            app:destination="@id/nav_new_project" />
-        <action
-            android:id="@+id/action_bottomNavMenu_to_my_projects"
-            app:destination="@id/nav_my_projects" />
-        <action
-            android:id="@+id/action_bottomNavMenu_to_factories"
-            app:destination="@id/nav_factories" />
-    </fragment>
-
-
-    <!-- 🏠 Home (Bottom Nav) -->
+    <!-- 🏠 Home -->
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.autofferandroid.fragments.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home">
-        </fragment>
+        tools:layout="@layout/fragment_home" />
 
     <!-- 💬 Chats -->
     <fragment
@@ -117,10 +95,28 @@
         android:name="com.example.autofferandroid.fragments.NewProjectFragment"
         android:label="New Project"
         tools:layout="@layout/fragment_new_project">
-        <action android:id="@+id/action_newProjectFragment_to_addManualFragment"
+        <action
+            android:id="@+id/action_newProjectFragment_to_addManualFragment"
             app:destination="@id/addManualFragment"/>
-        <action android:id="@+id/action_newProjectFragment_to_currentProjectFragment"
+        <action
+            android:id="@+id/action_newProjectFragment_to_currentProjectFragment"
             app:destination="@id/currentProjectFragment"/>
+    </fragment>
+
+    <!-- 📋 Current Project -->
+    <fragment
+        android:id="@+id/currentProjectFragment"
+        android:name="com.example.autofferandroid.fragments.CurrentProjectFragment"
+        android:label="Current Project"
+        tools:layout="@layout/fragment_current_project">
+        <action
+            android:id="@+id/action_currentProjectFragment_to_addManualFragment"
+            app:destination="@id/addManualFragment"/>
+        <action
+            android:id="@+id/action_currentProjectFragment_to_myProjectsFragment"
+            app:destination="@id/nav_my_projects"
+            app:popUpTo="@id/nav_new_project"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <!-- 📁 My Projects -->
@@ -143,18 +139,8 @@
         android:name="com.example.autofferandroid.fragments.AddManualFragment"
         android:label="Add Manual"
         tools:layout="@layout/fragment_add_manual">
-        <action android:id="@+id/action_addManualFragment_to_currentProjectFragment"
+        <action
+            android:id="@+id/action_addManualFragment_to_currentProjectFragment"
             app:destination="@id/currentProjectFragment"/>
     </fragment>
-
-    <!-- 📋 Current Project -->
-    <fragment
-        android:id="@+id/currentProjectFragment"
-        android:name="com.example.autofferandroid.fragments.CurrentProjectFragment"
-        android:label="Current Project"
-        tools:layout="@layout/fragment_current_project">
-        <action android:id="@+id/action_currentProjectFragment_to_addManualFragment"
-            app:destination="@id/addManualFragment"/>
-    </fragment>
-
 </navigation>

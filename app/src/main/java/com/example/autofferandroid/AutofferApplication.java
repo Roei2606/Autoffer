@@ -6,7 +6,6 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.rsocket_sdk.network.PingSender;
 import com.example.rsocket_sdk.network.RSocketClientManager;
 
 public class AutofferApplication extends Application {
@@ -21,7 +20,6 @@ public class AutofferApplication extends Application {
 
         if (connected) {
             Log.i(TAG, "✅ Connected to server. Sending ping...");
-            PingSender.sendPing(getApplicationContext());
         } else {
             Log.e(TAG, "❌ Failed to connect to RSocket server.");
             new Handler(Looper.getMainLooper()).post(() ->

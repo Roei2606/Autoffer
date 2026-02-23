@@ -9,3 +9,6 @@ server/gcloud/*.json
 
 # Autoffer secrets (new path)
 server/src/main/kotlin/org/autoffer/secrets/
+
+# Root Autoffer secrets
+src/main/kotlin/org/autoffer/secrets/

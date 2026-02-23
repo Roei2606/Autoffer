@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/currentProjectLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <!-- 🧱 Title -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textCurrentProjectTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Project Items"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 📋 Project Items List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProjectItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="12dp" />
+
+    <!-- ➕ Add Another Product Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddAnotherProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Another Product"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:backgroundTint="@color/black"
+        app:cornerRadius="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 💾 Save Project Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSaveProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Project"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:backgroundTint="@color/black"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

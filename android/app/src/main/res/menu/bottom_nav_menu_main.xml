@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 🏠 Home -->
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+
+    <!-- 💬 Chats -->
+    <item
+        android:id="@+id/nav_chats"
+        android:title="Chats"
+        android:icon="@drawable/ic_chats" />
+
+    <!-- ➕ New Project -->
+    <item
+        android:id="@+id/nav_new_project"
+        android:title="New Project"
+        android:icon="@drawable/ic_add_project" />
+
+    <!-- 📁 My Projects -->
+    <item
+        android:id="@+id/nav_my_projects"
+        android:title="My Projects"
+        android:icon="@drawable/ic_my_projects" />
+
+    <!-- 🏭 Factories -->
+    <item
+        android:id="@+id/nav_factories"
+        android:title="Factories"
+        android:icon="@drawable/ic_factories" />
+
+</menu>

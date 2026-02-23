@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "313683195324",
+    "project_id": "autoffer-b606c",
+    "storage_bucket": "autoffer-b606c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313683195324:android:ad0576895b0f19959727b9",
+        "android_client_info": {
+          "package_name": "com.example.autofferandroid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKMVteMfRKIGV8U986xmt_LGUyvUlMTX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

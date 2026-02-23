@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="24dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/newProjectLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Project Address -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutProjectAddress"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Project Address"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputProjectAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Add Products By -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textChooseMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Products By:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Add Manually Button -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/buttonAddManual"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="4dp"
+            android:padding="24dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_add_manual"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.LargeComponent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textAddManual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Manually"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Add with Camera Button -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/buttonAddCamera"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="4dp"
+            android:padding="24dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_add_camera"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.LargeComponent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textAddCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan Space"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- View Current Project Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonViewCurrentProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Current Project"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/black"
+            app:cornerRadius="16dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeColor="@color/gray3"
+    app:strokeWidth="1dp"
+    android:backgroundTint="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/buttonColumn"
+            android:layout_marginEnd="12dp">
+
+            <!-- Profile Type -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textProfileType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile: 4500"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Glass Type -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textGlassType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Glass: Triplex 5+5"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Dimensions -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textDimensions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dimensions: 150 x 120 cm"
+                android:textColor="@color/gray2"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Location -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location: Living Room"
+                android:textColor="@color/gray2"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Quantity -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity: 2"
+                android:textColor="@color/gray2"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Price Indicator -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textPriceIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <!-- Buttons Column -->
+        <LinearLayout
+            android:id="@+id/buttonColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp">
+
+            <!-- כפתור עריכה -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/buttonEdit"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:contentDescription="Edit"
+                    app:srcCompat="@drawable/ic_edit"
+                    android:backgroundTint="@color/gray6"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- כפתור מחיקה -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/buttonDelete"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:contentDescription="Delete"
+                    app:srcCompat="@drawable/ic_delete"
+                    android:backgroundTint="@color/gray6"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

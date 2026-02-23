@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- בסיס הנושא של האפליקציה -->
+    <style name="Theme.Autoffer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- צבעים עיקריים -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/gray1</item> <!-- צבע עזר עיקרי -->
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/gray3</item>
+        <item name="colorSecondaryVariant">@color/gray2</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- צבע רקע -->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorSurface">@color/gray6</item> <!-- שטחים פנימיים (למשל CardView) -->
+        <item name="colorOnSurface">@color/black</item>
+
+        <!-- צבע טקסט עיקרי -->
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/gray1</item>
+
+        <!-- עיצוב פוקוס לטפסים -->
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+
+        <!-- צבעים לבר עליון ותחתון -->
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+
+    </style>
+
+    <!-- עיצוב מותאם לשדות טקסט -->
+    <style name="Widget.Autoffer.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/gray6</item>
+        <item name="boxStrokeColor">@color/gray3</item>
+        <item name="hintTextColor">@color/gray1</item>
+        <item name="android:textColorHint">@color/gray1</item>
+    </style>
+
+
+
+</resources>

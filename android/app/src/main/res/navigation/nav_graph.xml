@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- 🔐 Login -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.autofferandroid.fragments.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_selectUserTypeFragment"
+            app:destination="@id/selectUserTypeFragment" />
+        <action
+            android:id="@+id/action_login_to_forgot_password"
+            app:destination="@id/forgotPasswordFragment"/>
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"/>
+    </fragment>
+
+    <!-- 🧍 Select User Type -->
+    <fragment
+        android:id="@+id/selectUserTypeFragment"
+        android:name="com.example.autofferandroid.fragments.SelectUserTypeFragment"
+        android:label="Select User Type"
+        tools:layout="@layout/fragment_select_user_type">
+
+        <action
+            android:id="@+id/action_selectUserTypeFragment_to_registerFragment"
+            app:destination="@id/registerFragment">
+            <argument
+                android:name="userType"
+                app:argType="com.example.core_models_sdk.models.UserType"
+                app:nullable="false" />
+        </action>
+    </fragment>
+
+    <!-- 📝 Register -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.autofferandroid.fragments.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <argument
+            android:name="userType"
+            app:argType="com.example.core_models_sdk.models.UserType" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+    </fragment>
+
+    <!-- ❓ Forgot Password -->
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.autofferandroid.fragments.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment"/>
+    </fragment>
+
+    <!-- 🔐 Reset Password -->
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.example.autofferandroid.fragments.ResetPasswordFragment"
+        android:label="Reset Password"
+        tools:layout="@layout/fragment_reset_password">
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+    </fragment>
+
+    <!-- 🏠 Home -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.autofferandroid.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <!-- 💬 Chats -->
+    <fragment
+        android:id="@+id/nav_chats"
+        android:name="com.example.autofferandroid.fragments.ChatsFragment"
+        android:label="Chats"
+        tools:layout="@layout/fragment_chats"/>
+
+    <!-- ➕ New Project -->
+    <fragment
+        android:id="@+id/nav_new_project"
+        android:name="com.example.autofferandroid.fragments.NewProjectFragment"
+        android:label="New Project"
+        tools:layout="@layout/fragment_new_project">
+        <action
+            android:id="@+id/action_newProjectFragment_to_addManualFragment"
+            app:destination="@id/addManualFragment"/>
+        <action
+            android:id="@+id/action_newProjectFragment_to_currentProjectFragment"
+            app:destination="@id/currentProjectFragment"/>
+    </fragment>
+
+    <!-- 📋 Current Project -->
+    <fragment
+        android:id="@+id/currentProjectFragment"
+        android:name="com.example.autofferandroid.fragments.CurrentProjectFragment"
+        android:label="Current Project"
+        tools:layout="@layout/fragment_current_project">
+        <action
+            android:id="@+id/action_currentProjectFragment_to_addManualFragment"
+            app:destination="@id/addManualFragment"/>
+        <action
+            android:id="@+id/action_currentProjectFragment_to_myProjectsFragment"
+            app:destination="@id/nav_my_projects"
+            app:popUpTo="@id/nav_new_project"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- 📁 My Projects -->
+    <fragment
+        android:id="@+id/nav_my_projects"
+        android:name="com.example.autofferandroid.fragments.MyProjectsFragment"
+        android:label="My Projects"
+        tools:layout="@layout/fragment_my_projects"/>
+
+    <!-- 🏭 User Directory -->
+    <fragment
+        android:id="@+id/nav_factories"
+        android:name="com.example.autofferandroid.fragments.UserDirectoryFragment"
+        android:label="Factories"
+        tools:layout="@layout/fragment_user_directory"/>
+
+    <!-- 🛠️ Add Manual Item -->
+    <fragment
+        android:id="@+id/addManualFragment"
+        android:name="com.example.autofferandroid.fragments.AddManualFragment"
+        android:label="Add Manual"
+        tools:layout="@layout/fragment_add_manual">
+        <action
+            android:id="@+id/action_addManualFragment_to_currentProjectFragment"
+            app:destination="@id/currentProjectFragment"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- טקסט ראשי -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewBoqRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A quote request has been received."
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+
+        <!-- מיקום הפרויקט -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewProjectAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Project address: N/A"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/black" />
+
+        <!-- כפתור PDF -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/buttonViewPdf"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_boq"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="View PDF" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View BOQ PDF"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- ✅ טקסט סטטוס שמופיע אחרי לחיצה על Accept/Reject -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black" />
+
+        <!-- מרווח -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <!-- שורת כפתורי אישור ודחייה -->
+        <LinearLayout
+            android:id="@+id/layoutActions"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/buttonReject"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Reject"
+                    android:src="@drawable/ic_reject" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reject"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="24dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/buttonAccept"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Accept"
+                    android:src="@drawable/ic_accept" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accept"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

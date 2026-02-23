@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Width Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutWidth"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Width (mm)"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Height Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutHeight"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Height (mm)"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Find Matching Profiles Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonFindProfiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Matching Profiles"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Lottie ProgressBar -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loadingIndicator"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_speed="1.5"
+            app:lottie_rawRes="@raw/loading_animation" />
+
+        <!-- Matching Profiles -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerProfiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:overScrollMode="never" />
+
+        <!-- Matching Glasses -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerGlasses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:overScrollMode="never" />
+
+        <!-- Location Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutPosition"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Position in Property"
+            android:visibility="gone"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPosition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Quantity Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutQuantity"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantity"
+            android:visibility="gone"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Add to Project Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAddItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:text="Add to Project"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/black"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

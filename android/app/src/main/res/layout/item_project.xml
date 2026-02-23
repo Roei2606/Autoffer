@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/gray3"
+    android:backgroundTint="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textProjectAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Project Address"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/layoutButtons"
+            app:layout_constraintHorizontal_bias="0" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textItemCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Items: 0"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="@color/gray2"
+            app:layout_constraintTop_toBottomOf="@id/textProjectAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/layoutButtons"
+            app:layout_constraintHorizontal_bias="0" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textCreatedAt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Created At: 01-01-2025 12:00"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="@color/gray4"
+            app:layout_constraintTop_toBottomOf="@id/textItemCount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/layoutButtons"
+            app:layout_constraintHorizontal_bias="0" />
+
+        <!-- ✅ סטטוס למפעלים -->
+        <LinearLayout
+            android:id="@+id/containerFactoryStatuses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintTop_toBottomOf="@id/textCreatedAt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/layoutButtons">
+
+            <!-- טקסט שמופיע רק אם אין סטטוס -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textNoRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No requests sent to any factory yet"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:gravity="start"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- צפייה ב-PDF -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/buttonViewBoqPdf"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="View My Project"
+                    app:srcCompat="@drawable/ic_boq"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View My Project"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- כפתור שליחה -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/buttonSend"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Ask For Pricing"
+                    app:srcCompat="@drawable/ic_sendfile"
+                    android:backgroundTint="@color/gray6"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ask For Pricing"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- כפתור מחיקה -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/buttonDelete"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Delete Project"
+                    app:srcCompat="@drawable/ic_delete"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.SmallComponent"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Project"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

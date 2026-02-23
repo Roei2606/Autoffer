@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:padding="16dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="16dp"
+    android:backgroundTint="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- תוכן מרכזי -->
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_toStartOf="@id/buttonSendMessage"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="72dp">
+
+            <!-- תמונת משתמש -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageUser"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_placeholder_user"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                android:background="@drawable/profile_image_border" />
+
+            <!-- טקסטים וכפתור פרופיל -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Architect Name"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <!-- שורת כתובת עם אייקון סיכה ולחיצה -->
+                <LinearLayout
+                    android:id="@+id/layoutAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iconLocation"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="6dp"
+                        android:src="@drawable/ic_location_pin"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textUserAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textColor="@color/blue"
+                        android:textStyle="italic"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonOpenProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Profile"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    android:backgroundTint="@color/gray_light"
+                    app:cornerRadius="12dp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- כפתור שליחת הודעה -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/buttonSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_send_message"
+            android:tint="@color/light_green"
+             />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

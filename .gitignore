@@ -1,0 +1,9 @@
+
+# Secrets
+server/src/main/kotlin/org/socialnetwork/messagingserver/secrets/
+server/gcloud/*.json
+*.json
+*.pem
+*.p12
+*.key
+.env

@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9F562552E5A318800B285F1 /* CoreModelsSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F9F562542E5A318800B285F1 /* CoreModelsSDK */; };
+		F9F562582E5A31AA00B285F1 /* RSocketSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F9F562572E5A31AA00B285F1 /* RSocketSDK */; };
+		F9F5625B2E5A31E600B285F1 /* ProjectsSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F9F5625A2E5A31E600B285F1 /* ProjectsSDK */; };
+		F9F5625E2E5A320200B285F1 /* LocalProjectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F9F5625D2E5A320200B285F1 /* LocalProjectSDK */; };
+		F9F562612E5A322300B285F1 /* AdsSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F9F562602E5A322300B285F1 /* AdsSDK */; };
+		F9F562642E5A325000B285F1 /* ChatSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F9F562632E5A325000B285F1 /* ChatSDK */; };
+		F9F562672E5A331900B285F1 /* UsersSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F9F562662E5A331900B285F1 /* UsersSDK */; };
+		F9F5626A2E5A351B00B285F1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F9F562692E5A351B00B285F1 /* Lottie */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F93B346E2E479BEE001284BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F93B344F2E479BED001284BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F93B34562E479BED001284BA;
+			remoteInfo = AutofferApp;
+		};
+		F93B34782E479BEE001284BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F93B344F2E479BED001284BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F93B34562E479BED001284BA;
+			remoteInfo = AutofferApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F93B34572E479BED001284BA /* AutofferApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutofferApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93B346D2E479BEE001284BA /* AutofferAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutofferAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93B34772E479BEE001284BA /* AutofferAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutofferAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F9F5633A2E5B276300B285F1 /* Exceptions for "AutofferApp" folder in "AutofferApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F93B34562E479BED001284BA /* AutofferApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F93B34592E479BED001284BA /* AutofferApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F9F5633A2E5B276300B285F1 /* Exceptions for "AutofferApp" folder in "AutofferApp" target */,
+			);
+			path = AutofferApp;
+			sourceTree = "<group>";
+		};
+		F93B34702E479BEE001284BA /* AutofferAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AutofferAppTests;
+			sourceTree = "<group>";
+		};
+		F93B347A2E479BEE001284BA /* AutofferAppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AutofferAppUITests;
+			sourceTree = "<group>";
+		};
+		F9F562BC2E5AFBD500B285F1 /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F9F562BD2E5AFC2C00B285F1 /* DesignSystem */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		F9F562BE2E5AFC3700B285F1 /* Data */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F9F562C22E5AFC7800B285F1 /* Navigation */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		F9F562C32E5AFC8300B285F1 /* Features */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F9F562C92E5AFD6F00B285F1 /* Home */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F9F562CA2E5AFD7E00B285F1 /* Chats */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		F9F562CF2E5AFE0800B285F1 /* Projects */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		F9F562D52E5AFE9200B285F1 /* UserDirectory */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = UserDirectory;
+			sourceTree = "<group>";
+		};
+		F9F562D62E5AFEA800B285F1 /* Ads */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Ads;
+			sourceTree = "<group>";
+		};
+		F9F562D72E5AFEBE00B285F1 /* Profile */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Profile;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F93B34542E479BED001284BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F562672E5A331900B285F1 /* UsersSDK in Frameworks */,
+				F9F562612E5A322300B285F1 /* AdsSDK in Frameworks */,
+				F9F5625B2E5A31E600B285F1 /* ProjectsSDK in Frameworks */,
+				F9F562552E5A318800B285F1 /* CoreModelsSDK in Frameworks */,
+				F9F562642E5A325000B285F1 /* ChatSDK in Frameworks */,
+				F9F562582E5A31AA00B285F1 /* RSocketSDK in Frameworks */,
+				F9F5625E2E5A320200B285F1 /* LocalProjectSDK in Frameworks */,
+				F9F5626A2E5A351B00B285F1 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93B346A2E479BEE001284BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93B34742E479BEE001284BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F93B344E2E479BED001284BA = {
+			isa = PBXGroup;
+			children = (
+				F9F562D72E5AFEBE00B285F1 /* Profile */,
+				F9F562D62E5AFEA800B285F1 /* Ads */,
+				F9F562D52E5AFE9200B285F1 /* UserDirectory */,
+				F9F562CF2E5AFE0800B285F1 /* Projects */,
+				F9F562CA2E5AFD7E00B285F1 /* Chats */,
+				F9F562C92E5AFD6F00B285F1 /* Home */,
+				F9F562C32E5AFC8300B285F1 /* Features */,
+				F9F562C22E5AFC7800B285F1 /* Navigation */,
+				F9F562BE2E5AFC3700B285F1 /* Data */,
+				F9F562BD2E5AFC2C00B285F1 /* DesignSystem */,
+				F9F562BC2E5AFBD500B285F1 /* Resources */,
+				F93B34592E479BED001284BA /* AutofferApp */,
+				F93B34702E479BEE001284BA /* AutofferAppTests */,
+				F93B347A2E479BEE001284BA /* AutofferAppUITests */,
+				F9F561F22E59DA6C00B285F1 /* Frameworks */,
+				F93B34582E479BED001284BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F93B34582E479BED001284BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F93B34572E479BED001284BA /* AutofferApp.app */,
+				F93B346D2E479BEE001284BA /* AutofferAppTests.xctest */,
+				F93B34772E479BEE001284BA /* AutofferAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9F561F22E59DA6C00B285F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F93B34562E479BED001284BA /* AutofferApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93B34802E479BEE001284BA /* Build configuration list for PBXNativeTarget "AutofferApp" */;
+			buildPhases = (
+				F93B34532E479BED001284BA /* Sources */,
+				F93B34542E479BED001284BA /* Frameworks */,
+				F93B34552E479BED001284BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F93B34592E479BED001284BA /* AutofferApp */,
+				F9F562BC2E5AFBD500B285F1 /* Resources */,
+				F9F562BD2E5AFC2C00B285F1 /* DesignSystem */,
+				F9F562BE2E5AFC3700B285F1 /* Data */,
+				F9F562C22E5AFC7800B285F1 /* Navigation */,
+				F9F562C32E5AFC8300B285F1 /* Features */,
+				F9F562C92E5AFD6F00B285F1 /* Home */,
+				F9F562CA2E5AFD7E00B285F1 /* Chats */,
+				F9F562CF2E5AFE0800B285F1 /* Projects */,
+				F9F562D52E5AFE9200B285F1 /* UserDirectory */,
+				F9F562D62E5AFEA800B285F1 /* Ads */,
+				F9F562D72E5AFEBE00B285F1 /* Profile */,
+			);
+			name = AutofferApp;
+			packageProductDependencies = (
+				F9F562542E5A318800B285F1 /* CoreModelsSDK */,
+				F9F562572E5A31AA00B285F1 /* RSocketSDK */,
+				F9F5625A2E5A31E600B285F1 /* ProjectsSDK */,
+				F9F5625D2E5A320200B285F1 /* LocalProjectSDK */,
+				F9F562602E5A322300B285F1 /* AdsSDK */,
+				F9F562632E5A325000B285F1 /* ChatSDK */,
+				F9F562662E5A331900B285F1 /* UsersSDK */,
+				F9F562692E5A351B00B285F1 /* Lottie */,
+			);
+			productName = AutofferApp;
+			productReference = F93B34572E479BED001284BA /* AutofferApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F93B346C2E479BEE001284BA /* AutofferAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93B34852E479BEE001284BA /* Build configuration list for PBXNativeTarget "AutofferAppTests" */;
+			buildPhases = (
+				F93B34692E479BEE001284BA /* Sources */,
+				F93B346A2E479BEE001284BA /* Frameworks */,
+				F93B346B2E479BEE001284BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F93B346F2E479BEE001284BA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F93B34702E479BEE001284BA /* AutofferAppTests */,
+			);
+			name = AutofferAppTests;
+			packageProductDependencies = (
+			);
+			productName = AutofferAppTests;
+			productReference = F93B346D2E479BEE001284BA /* AutofferAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F93B34762E479BEE001284BA /* AutofferAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93B34882E479BEE001284BA /* Build configuration list for PBXNativeTarget "AutofferAppUITests" */;
+			buildPhases = (
+				F93B34732E479BEE001284BA /* Sources */,
+				F93B34742E479BEE001284BA /* Frameworks */,
+				F93B34752E479BEE001284BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F93B34792E479BEE001284BA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F93B347A2E479BEE001284BA /* AutofferAppUITests */,
+			);
+			name = AutofferAppUITests;
+			packageProductDependencies = (
+			);
+			productName = AutofferAppUITests;
+			productReference = F93B34772E479BEE001284BA /* AutofferAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F93B344F2E479BED001284BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					F93B34562E479BED001284BA = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					F93B346C2E479BEE001284BA = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F93B34562E479BED001284BA;
+					};
+					F93B34762E479BEE001284BA = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F93B34562E479BED001284BA;
+					};
+				};
+			};
+			buildConfigurationList = F93B34522E479BED001284BA /* Build configuration list for PBXProject "AutofferApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F93B344E2E479BED001284BA;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F9F562532E5A318800B285F1 /* XCLocalSwiftPackageReference "SDKs/CoreModelsSDK" */,
+				F9F562562E5A31AA00B285F1 /* XCLocalSwiftPackageReference "SDKs/RSocketSDK" */,
+				F9F562592E5A31E600B285F1 /* XCLocalSwiftPackageReference "SDKs/ProjectsSDK" */,
+				F9F5625C2E5A320200B285F1 /* XCLocalSwiftPackageReference "SDKs/LocalProjectSDK" */,
+				F9F5625F2E5A322300B285F1 /* XCLocalSwiftPackageReference "SDKs/AdsSDK" */,
+				F9F562622E5A325000B285F1 /* XCLocalSwiftPackageReference "SDKs/ChatSDK" */,
+				F9F562652E5A331900B285F1 /* XCLocalSwiftPackageReference "SDKs/UsersSDK" */,
+				F9F562682E5A351B00B285F1 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F93B34582E479BED001284BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F93B34562E479BED001284BA /* AutofferApp */,
+				F93B346C2E479BEE001284BA /* AutofferAppTests */,
+				F93B34762E479BEE001284BA /* AutofferAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F93B34552E479BED001284BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93B346B2E479BEE001284BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93B34752E479BEE001284BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F93B34532E479BED001284BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93B34692E479BEE001284BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93B34732E479BEE001284BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F93B346F2E479BEE001284BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F93B34562E479BED001284BA /* AutofferApp */;
+			targetProxy = F93B346E2E479BEE001284BA /* PBXContainerItemProxy */;
+		};
+		F93B34792E479BEE001284BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F93B34562E479BED001284BA /* AutofferApp */;
+			targetProxy = F93B34782E479BEE001284BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F93B34812E479BEE001284BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5VQ69JG6T2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutofferApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HakmonApps.AutofferApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F93B34822E479BEE001284BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5VQ69JG6T2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutofferApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HakmonApps.AutofferApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F93B34832E479BEE001284BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5VQ69JG6T2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F93B34842E479BEE001284BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5VQ69JG6T2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F93B34862E479BEE001284BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5VQ69JG6T2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HakmonApps.AutofferAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutofferApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AutofferApp";
+			};
+			name = Debug;
+		};
+		F93B34872E479BEE001284BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5VQ69JG6T2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HakmonApps.AutofferAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutofferApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AutofferApp";
+			};
+			name = Release;
+		};
+		F93B34892E479BEE001284BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5VQ69JG6T2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HakmonApps.AutofferAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AutofferApp;
+			};
+			name = Debug;
+		};
+		F93B348A2E479BEE001284BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5VQ69JG6T2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HakmonApps.AutofferAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AutofferApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F93B34522E479BED001284BA /* Build configuration list for PBXProject "AutofferApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93B34832E479BEE001284BA /* Debug */,
+				F93B34842E479BEE001284BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93B34802E479BEE001284BA /* Build configuration list for PBXNativeTarget "AutofferApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93B34812E479BEE001284BA /* Debug */,
+				F93B34822E479BEE001284BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93B34852E479BEE001284BA /* Build configuration list for PBXNativeTarget "AutofferAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93B34862E479BEE001284BA /* Debug */,
+				F93B34872E479BEE001284BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93B34882E479BEE001284BA /* Build configuration list for PBXNativeTarget "AutofferAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93B34892E479BEE001284BA /* Debug */,
+				F93B348A2E479BEE001284BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		F9F562532E5A318800B285F1 /* XCLocalSwiftPackageReference "SDKs/CoreModelsSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SDKs/CoreModelsSDK;
+		};
+		F9F562562E5A31AA00B285F1 /* XCLocalSwiftPackageReference "SDKs/RSocketSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SDKs/RSocketSDK;
+		};
+		F9F562592E5A31E600B285F1 /* XCLocalSwiftPackageReference "SDKs/ProjectsSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SDKs/ProjectsSDK;
+		};
+		F9F5625C2E5A320200B285F1 /* XCLocalSwiftPackageReference "SDKs/LocalProjectSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SDKs/LocalProjectSDK;
+		};
+		F9F5625F2E5A322300B285F1 /* XCLocalSwiftPackageReference "SDKs/AdsSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SDKs/AdsSDK;
+		};
+		F9F562622E5A325000B285F1 /* XCLocalSwiftPackageReference "SDKs/ChatSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SDKs/ChatSDK;
+		};
+		F9F562652E5A331900B285F1 /* XCLocalSwiftPackageReference "SDKs/UsersSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SDKs/UsersSDK;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F9F562682E5A351B00B285F1 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F9F562542E5A318800B285F1 /* CoreModelsSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreModelsSDK;
+		};
+		F9F562572E5A31AA00B285F1 /* RSocketSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RSocketSDK;
+		};
+		F9F5625A2E5A31E600B285F1 /* ProjectsSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProjectsSDK;
+		};
+		F9F5625D2E5A320200B285F1 /* LocalProjectSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LocalProjectSDK;
+		};
+		F9F562602E5A322300B285F1 /* AdsSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AdsSDK;
+		};
+		F9F562632E5A325000B285F1 /* ChatSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ChatSDK;
+		};
+		F9F562662E5A331900B285F1 /* UsersSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UsersSDK;
+		};
+		F9F562692E5A351B00B285F1 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9F562682E5A351B00B285F1 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F93B344F2E479BED001284BA /* Project object */;
+}

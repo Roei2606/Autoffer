@@ -1,0 +1,14 @@
+.DS_Store
+build/
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+.swiftpm/
+Pods/
+Carthage/
+*.ipa
+*.p12
+*.mobileprovision
+*.key
+*.cer
+.env

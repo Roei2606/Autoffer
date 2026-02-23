@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+DerivedData/
+*.moved-aside
+*.ipa
+
+# SwiftPM
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.swiftpm/xcode/xcshareddata/IDEWorkspaceChecks.plist
+# keep Package.resolved to lock versions
+# Packages/
+# Package.pins  # (old) don’t use
+
+# Cocoapods / Carthage (not used, but safe)
+Pods/
+Cartfile.resolved
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Crash / Logs
+*.crash
+*.log
+
+# Secrets
+*.p12
+*.mobileprovision
+*.key
+*.cer
+.env

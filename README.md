@@ -496,8 +496,6 @@ export DOCAI_URL="http://localhost:5051/parse"
 ## 👥 Team
 
 - **Roei Hakmon** — Project Lead & Developer
-- **Yoram Rosenvaks** — Supervisor
-- **Daniel Levitsky** · **Netanel Neizov** · **Yuval Hofman**
 
 ---
 

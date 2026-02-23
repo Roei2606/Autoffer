@@ -6,3 +6,6 @@ server/gcloud/*.json
 *.p12
 *.key
 .env
+
+# Autoffer secrets (new path)
+server/src/main/kotlin/org/autoffer/secrets/
